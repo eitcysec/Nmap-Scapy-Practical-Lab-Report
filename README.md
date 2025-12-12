@@ -99,12 +99,22 @@ Type **exit** to leave the SMB shell.
 
     sudo tcpdump -i eth0 -s 0 -w ladies.pcap
 
+<img width="602" height="317" alt="image" src="https://github.com/user-attachments/assets/e55b9d5f-85fd-49bd-b527-8ffd6ff7e515" />
+
+
 Stop with: **CTRL + C**
+
+<img width="575" height="338" alt="image" src="https://github.com/user-attachments/assets/601475cc-a6d1-4264-aff6-a13d7e256557" />
+
 
 ### Verify capture file
 
     ls ladies.pcap
+    <img width="431" height="274" alt="image" src="https://github.com/user-attachments/assets/edd40f8b-d543-476c-9517-02cf7d30cb6a" />
+
     wireshark
+<img width="875" height="404" alt="image" src="https://github.com/user-attachments/assets/91391fa0-4353-41b2-88b0-b83e902ccd21" />
+
 
 ------------------------------------------------------------------------
 
@@ -112,6 +122,9 @@ Stop with: **CTRL + C**
 
     sudo su
     scapy
+
+<img width="859" height="401" alt="image" src="https://github.com/user-attachments/assets/682e7f7f-cc53-4ecf-ab6e-beb9de191078" />
+
 
 ## 1. Sniff All Traffic
 
@@ -121,10 +134,15 @@ Open a new terminal and run:
 
     ping google.com
 
+<img width="949" height="379" alt="image" src="https://github.com/user-attachments/assets/d17114d4-9dec-4a9a-9893-3d7d5f020107" />
+
 Stop sniffing with **CTRL + C**
 
     paro = _
     paro.summary()
+
+
+<img width="954" height="401" alt="image" src="https://github.com/user-attachments/assets/cf566bd6-5a72-4136-87bc-1f7db27246e1" />
 
 ------------------------------------------------------------------------
 
@@ -134,12 +152,15 @@ Stop sniffing with **CTRL + C**
 
 Generate traffic by opening a browser and visiting:
 
-    10.10.10.17
+    www.cisco.com
 
 Stop, then:
 
     paro2 = _
     paro2.summary()
+
+<img width="797" height="414" alt="image" src="https://github.com/user-attachments/assets/e7162445-2ed9-4a2b-bfa1-e7533b45146a" />
+
 
 ------------------------------------------------------------------------
 
@@ -159,8 +180,4 @@ Stop, then:
 
 ------------------------------------------------------------------------
 
-# Notes
-
-Add screenshots of your terminal output and Wireshark captures inside
-your repository.
 
