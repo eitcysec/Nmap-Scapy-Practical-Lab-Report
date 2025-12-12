@@ -84,11 +84,17 @@ Type **exit** to leave the SMB shell.
 
     ifconfig
 
+<img width="709" height="419" alt="image" src="https://github.com/user-attachments/assets/408a2bbc-ea1e-4e63-a0e0-5169269c5da8" />
+
+
     ip route
+<img width="812" height="398" alt="image" src="https://github.com/user-attachments/assets/a2314ba0-b855-4d08-8257-1cc40d6078e2" />
+
 
     cat /etc/resolv.conf
 
-   
+<img width="809" height="370" alt="image" src="https://github.com/user-attachments/assets/4313b71f-7a0e-4d7e-bbb2-6c3938ae2291" />
+
 
 
 ------------------------------------------------------------------------
