@@ -12,7 +12,7 @@ from the ParoSecurity practical class.
 
 -   **Kali Linux VM**
 -   **Network Range:** 10.10.10.0/24
--   **Target Machine:** 10.10.10.17
+-   **Target Machine:** 10.10.10.17; 10.10.10.10
 -   **Tools:** Nmap, Scapy, tcpdump, Wireshark
 
 ------------------------------------------------------------------------
@@ -24,6 +24,8 @@ from the ParoSecurity practical class.
     nmap -sn 10.10.10.0/24
 
 **Purpose:** Identifies live hosts on the network.
+<img width="675" height="419" alt="Screenshot 2025-12-11 194156" src="https://github.com/user-attachments/assets/2c358310-ed18-4fd3-a8db-0fc48d77776a" />
+
 
 ------------------------------------------------------------------------
 
