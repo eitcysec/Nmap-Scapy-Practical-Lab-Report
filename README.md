@@ -34,6 +34,11 @@ from the ParoSecurity practical class.
     sudo nmap -O 10.10.10.17
 
 **Purpose:** Fingerprints the operating system of the target.
+<img width="681" height="412" alt="Screenshot 2025-12-11 194347" src="https://github.com/user-attachments/assets/3af108c7-7125-4606-9f89-d6cb2b48f036" />
+
+<img width="856" height="226" alt="Screenshot 2025-12-11 194408" src="https://github.com/user-attachments/assets/05ddb741-0396-495a-a638-f127a8b56b4e" />
+
+
 
 ------------------------------------------------------------------------
 
@@ -44,17 +49,26 @@ from the ParoSecurity practical class.
 **Purpose:** Checks port 21, identifies service version, OS info,
 traceroute, and runs default scripts.
 
+<img width="925" height="414" alt="Screenshot 2025-12-11 194628" src="https://github.com/user-attachments/assets/95aa6ef5-5ea3-4eab-ac22-45d856f14398" />
+
+
 ------------------------------------------------------------------------
 
 ## 4. SMB Port Scan
 
     nmap -A p139, p445 10.10.10.17
 
+    <img width="919" height="426" alt="Screenshot 2025-12-11 194807" src="https://github.com/user-attachments/assets/b3ffd65d-91e1-4afb-94a7-f9554c64f39e" />
+
+<img width="925" height="414" alt="Screenshot 2025-12-11 194628" src="https://github.com/user-attachments/assets/72be7920-6f43-4bd4-a249-ed0d97da55d5" />
+
+
 ------------------------------------------------------------------------
 
 ## 5. SMB Share Enumeration
 
     nmap --script smb-enum-shares.nse -p445 10.10.10.10
+    
 
 ------------------------------------------------------------------------
 
@@ -69,8 +83,17 @@ Type **exit** to leave the SMB shell.
 # NETWORK BASELINE COMMANDS
 
     ifconfig
+
+    <img width="797" height="426" alt="Screenshot 2025-12-11 195708" src="https://github.com/user-attachments/assets/156f7fd4-81bb-47fb-839b-d819a56797ac" />
+
     ip route
+
+    <img width="844" height="371" alt="Screenshot 2025-12-11 200005" src="https://github.com/user-attachments/assets/ca71a577-ca52-4303-a05f-89a2db2055ae" />
+
     cat /etc/resolv.conf
+
+    <img width="703" height="336" alt="Screenshot 2025-12-11 200057" src="https://github.com/user-attachments/assets/86f5d4a0-d21d-49f4-82c9-1ae864194df5" />
+
 
 ------------------------------------------------------------------------
 
