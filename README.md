@@ -145,7 +145,7 @@ Stop with: **CTRL + C**
     sudo su
     scapy
 
-<img width="859" height="401" alt="image" src="https://github.com/user-attachments/assets/682e7f7f-cc53-4ecf-ab6e-beb9de191078" />
+<img width="413" height="407" alt="image" src="https://github.com/user-attachments/assets/262dc816-2ae4-4ac6-bd60-13ea9b785784" />
 
 
 ## 1. Sniff All Traffic
@@ -156,7 +156,10 @@ Open a new terminal and run:
 
     ping google.com
 
-<img width="949" height="379" alt="image" src="https://github.com/user-attachments/assets/d17114d4-9dec-4a9a-9893-3d7d5f020107" />
+
+<img width="826" height="436" alt="image" src="https://github.com/user-attachments/assets/c54ab6ff-b350-4e2d-9efe-f94ebe9e6af0" />
+
+
 
 Stop sniffing with **CTRL + C**
 
@@ -164,7 +167,7 @@ Stop sniffing with **CTRL + C**
     paro.summary()
 
 
-<img width="954" height="401" alt="image" src="https://github.com/user-attachments/assets/cf566bd6-5a72-4136-87bc-1f7db27246e1" />
+<img width="769" height="393" alt="image" src="https://github.com/user-attachments/assets/ec2f5329-4f5d-4002-9c21-39fed80b7be9" />
 
 ------------------------------------------------------------------------
 
@@ -176,12 +179,14 @@ Generate traffic by opening a browser and visiting:
 
     www.cisco.com
 
+<img width="836" height="441" alt="image" src="https://github.com/user-attachments/assets/07a8a50e-fb6f-4a8b-9eeb-825e976a9b2b" />
+
+
 Stop, then:
 
     paro2 = _
     paro2.summary()
 
-<img width="797" height="414" alt="image" src="https://github.com/user-attachments/assets/e7162445-2ed9-4a2b-bfa1-e7533b45146a" />
 
 
 ------------------------------------------------------------------------
