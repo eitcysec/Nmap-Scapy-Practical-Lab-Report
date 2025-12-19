@@ -11,8 +11,8 @@ from the ParoSecurity practical class.
 ## Environment Setup
 
 -   **Kali Linux VM**
--   **Network Range:** 10.10.10.0/24
--   **Target Machine:** 10.10.10.17; 10.10.10.10
+-   **Network Range:** 10.6.6.0/24
+-   **Target Machine:** 10.6.6.23
 -   **Tools:** Nmap, Scapy, tcpdump, Wireshark
 
 ------------------------------------------------------------------------
@@ -21,22 +21,25 @@ from the ParoSecurity practical class.
 
 ## 1. Host Discovery Scan
 
-    nmap -sn 10.10.10.0/24
+    nmap -sn 10.6.6.0/24
 
 **Purpose:** Identifies live hosts on the network.
-<img width="675" height="419" alt="Screenshot 2025-12-11 194156" src="https://github.com/user-attachments/assets/2c358310-ed18-4fd3-a8db-0fc48d77776a" />
+
+<img width="437" height="275" alt="image" src="https://github.com/user-attachments/assets/9fd5aabb-4bda-4646-beb2-b73921300158" />
+
+
 
 
 ------------------------------------------------------------------------
 
 ## 2. OS Detection Scan
 
-    sudo nmap -O 10.10.10.17
+    sudo nmap -O 10.6.6.23
 
 **Purpose:** Fingerprints the operating system of the target.
-<img width="681" height="412" alt="Screenshot 2025-12-11 194347" src="https://github.com/user-attachments/assets/3af108c7-7125-4606-9f89-d6cb2b48f036" />
 
-<img width="856" height="226" alt="Screenshot 2025-12-11 194408" src="https://github.com/user-attachments/assets/05ddb741-0396-495a-a638-f127a8b56b4e" />
+<img width="465" height="299" alt="image" src="https://github.com/user-attachments/assets/d6722da9-b24a-43ce-a688-a81bd3593743" />
+
 
 
 
@@ -44,37 +47,44 @@ from the ParoSecurity practical class.
 
 ## 3. Port/Service/Version Scan + OS + Scripts
 
-    nmap -p21 -sV -A -T4 10.10.10.17
+    nmap -p21 -sV -A -T4 10.6.6.23
 
 **Purpose:** Checks port 21, identifies service version, OS info,
 traceroute, and runs default scripts.
 
-<img width="925" height="414" alt="Screenshot 2025-12-11 194628" src="https://github.com/user-attachments/assets/95aa6ef5-5ea3-4eab-ac22-45d856f14398" />
+
+<img width="602" height="404" alt="image" src="https://github.com/user-attachments/assets/da4186e4-1c9b-46ba-a0f2-129754bc18d4" />
 
 
 ------------------------------------------------------------------------
 
 ## 4. SMB Port Scan
 
-    nmap -A p139, p445 10.10.10.17
+    nmap -A p139, p445 10.6.6.23
 
-    <img width="919" height="426" alt="Screenshot 2025-12-11 194807" src="https://github.com/user-attachments/assets/b3ffd65d-91e1-4afb-94a7-f9554c64f39e" />
+<img width="599" height="409" alt="image" src="https://github.com/user-attachments/assets/523cc53e-b510-45af-8681-adde77cb5b9b" />
 
-<img width="925" height="414" alt="Screenshot 2025-12-11 194628" src="https://github.com/user-attachments/assets/72be7920-6f43-4bd4-a249-ed0d97da55d5" />
+
 
 
 ------------------------------------------------------------------------
 
 ## 5. SMB Share Enumeration
 
-    nmap --script smb-enum-shares.nse -p445 10.10.10.10
+    nmap --script smb-enum-shares.nse -p445 10.6.6.23
+
+<img width="684" height="362" alt="image" src="https://github.com/user-attachments/assets/8f0481a1-db90-467a-a7b2-041aba435566" />
+
     
 
 ------------------------------------------------------------------------
 
 ## 6. Access SMB Share
 
-    smbclient //10.10.10.10/print$ -N
+    smbclient //10.6.6.23/print$
+
+<img width="679" height="239" alt="image" src="https://github.com/user-attachments/assets/ddb81f22-dc76-4331-b85c-9df6ee21861b" />
+
 
 Type **exit** to leave the SMB shell.
 
@@ -84,16 +94,20 @@ Type **exit** to leave the SMB shell.
 
     ifconfig
 
-<img width="709" height="419" alt="image" src="https://github.com/user-attachments/assets/408a2bbc-ea1e-4e63-a0e0-5169269c5da8" />
+<img width="565" height="407" alt="image" src="https://github.com/user-attachments/assets/cfcf2c25-ed6b-4c14-9791-ba27592c4d95" />
 
 
     ip route
-<img width="812" height="398" alt="image" src="https://github.com/user-attachments/assets/a2314ba0-b855-4d08-8257-1cc40d6078e2" />
+
+<img width="607" height="239" alt="image" src="https://github.com/user-attachments/assets/562f866c-a62a-4c1a-a147-1bbd2f1f98a8" />
+
+
 
 
     cat /etc/resolv.conf
 
-<img width="809" height="370" alt="image" src="https://github.com/user-attachments/assets/4313b71f-7a0e-4d7e-bbb2-6c3938ae2291" />
+
+<img width="477" height="289" alt="image" src="https://github.com/user-attachments/assets/a15ed2c0-84a5-4b85-9cb1-605eaeabdc18" />
 
 
 
@@ -104,23 +118,25 @@ Type **exit** to leave the SMB shell.
 ### Start Capture
 
     sudo tcpdump -i eth0 -s 0 -w ladies.pcap
+    
+<img width="513" height="246" alt="image" src="https://github.com/user-attachments/assets/22bfe5c2-7786-42ce-b4d3-c2380bf1a1cd" />
 
-<img width="602" height="317" alt="image" src="https://github.com/user-attachments/assets/e55b9d5f-85fd-49bd-b527-8ffd6ff7e515" />
 
 
 Stop with: **CTRL + C**
 
-<img width="575" height="338" alt="image" src="https://github.com/user-attachments/assets/601475cc-a6d1-4264-aff6-a13d7e256557" />
 
 
 ### Verify capture file
 
     ls ladies.pcap
-    <img width="431" height="274" alt="image" src="https://github.com/user-attachments/assets/edd40f8b-d543-476c-9517-02cf7d30cb6a" />
+
+<img width="389" height="212" alt="image" src="https://github.com/user-attachments/assets/5ea4b92c-58df-44cb-ac69-fe2ad09ac2a6" />
+
 
     wireshark
-<img width="875" height="404" alt="image" src="https://github.com/user-attachments/assets/91391fa0-4353-41b2-88b0-b83e902ccd21" />
 
+<img width="671" height="443" alt="image" src="https://github.com/user-attachments/assets/b3b60b9e-1a02-4253-9e27-cff8910d7a9d" />
 
 ------------------------------------------------------------------------
 
